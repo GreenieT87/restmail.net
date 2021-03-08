@@ -1,4 +1,12 @@
-# Email addresses for testing
+# restmail.net docker-compose fork
+
+I dont need all the fancy ansible stuff a simple docker-compose file is enough for me. So this is exactly this.
+
+Basic functionality is all the same really only added the docker-compose file.
+
+## Original Readme
+
+## Email addresses for testing
 
 [![Build Status](https://secure.travis-ci.org/mozilla/restmail.net.svg)](http://travis-ci.org/mozilla/restmail.net)
 
@@ -90,16 +98,19 @@ fields stripped out):
 ]
 ```
 
-## restmail on your domain (deprecated; the public restmail.net is now resricted).
+## restmail on your domain (deprecated; the public restmail.net is now resricted)
 
 You can use restmail from custom domains:  Just set restmail as your mail exchanger:
 
-    $ dig -t <my domain>
-    <my domain>            900     IN      MX      20 restmail.net.
+```none
+$ dig -t <my domain>
+<my domain>            900     IN      MX      20 restmail.net.
+```
 
 And fetch mail with the full email address:
 
-    GET /mail/<user>@<my domain>
+```none
+GET /mail/<user>@<my domain>
+```
 
 done!
-
